@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        setInterval(function(){
+navigator.getBattery().then(function(battery) {
+
+    var charging = battery.charging;
+
+    console.log(charging);
+    if (charging) {document.body.style.backgroundColor="green";document.getElementById("state").innerHTML="CHARGING"}
+    else {document.body.style.backgroundColor="red";document.getElementById("state").innerHTML="NOT CHARGING"}
+});
+},500)
+    </script>
+    <h1 id="state" style="font-size: 300%;"></h1>
+</body>
+</html>
