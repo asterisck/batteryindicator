@@ -1,0 +1,2 @@
+# batteryindicator
+Get Charging Status
